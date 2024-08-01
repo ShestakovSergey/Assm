@@ -1,0 +1,22 @@
+#!/usr/bin/env python3
+
+#import libraries
+import numpy as np
+from scipy import stats
+
+#create array from random numbers
+stat_arr = np.random.randint(1, 101, size=50)
+
+#standart deviation for the general sample
+std_popul = np.std(stat_arr, ddof=0)
+
+#Z standardization
+mean = np.mean(stat_arr)
+median = np.median(stat_arr)
+mode_res = stats.mode(stat_arr)
+median = np.median(stat_arr)
+z_arr = (stat_arr - mean) / std_popul
+
+with open('pyscript', 'w') as file:
+    file.write(f"Array: {stat_arr}\n\n")
+    file.write(f"Standart deviation is {std_popul}\n\n")
