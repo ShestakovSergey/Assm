@@ -1,0 +1,11 @@
+import numpy as np
+import statsmodels.api as sm
+import matplotlib.pyplot as plt
+
+np.random.seed(42)
+
+data = np.random.normal(loc=0, scale=1, size=10)
+
+sm.qqplot(data, line='s')
+plt.title('Graphic')
+plt.show()
