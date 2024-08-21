@@ -1,0 +1,8 @@
+#!/usr/bin/env python3
+
+import statistics as sts
+
+gen_arr = [3, 1, 2, 5, 3, 4, 7, 6, 5]
+
+print(f'X = {sts.mean(gen_arr)}')
+print(f'SST = {sts.pvariance(gen_arr)*len(gen_arr)}')

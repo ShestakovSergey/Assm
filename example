@@ -1,9 +1,16 @@
 #!/usr/bin/env python3
 
-import random
+import json 
 import statistics as sts
 
-x = [random.randint(1, 49) for _ in range(21)]
-x.sort()
+with open('/home/serg77/Assm/data_arr', 'r') as f:
+    x = json.loads(f.read())
+f.close()
 
+print(f'array = {x}')
 print(f'mean = {sts.mean(x)}')
+print(f'moda = {sts.multimode(x)}')
+print(f'median = {sts.median(x)}')
+print(f'sigma = {sts.pstdev(x)}')
+print(f'D = {sts.pvariance(x)}')
+
